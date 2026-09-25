@@ -1,0 +1,9 @@
+:root {
+    --primary: #ffff;
+    --big-color: rgb(5, 53, 61);
+    --bg-env-tab: #f5edd1;
+    --env-cover: #efc4a7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --star-color: rgb(110, 176, 212);
+}
