@@ -125,3 +125,27 @@ body {
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.map, 
+.map:link, 
+.map:visited {
+    text-decoration: none;
+    color: var(--star-color) !important;
+}
+
+.map:hover,
+.map:active {
+    color: var(--star-color);
+    text-decoration: underline;
+}
+
+.info {
+    color: white;
+    height: 0;
+    margin: 1px;
+}
+
+.text p {
+    padding: 0;
+    margin: 2;
+}
