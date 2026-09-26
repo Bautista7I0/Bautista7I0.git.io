@@ -125,10 +125,3 @@ body {
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-/* Adaptación para pantallas de celular */
-@media (max-width: 480px) {
-    .cont > .wrapp {
-        transform: scale(0.85); /* Escala el sobre proporcionalmente en móviles */
-    }
-}
