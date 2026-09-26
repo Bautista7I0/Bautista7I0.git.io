@@ -84,11 +84,11 @@ body {
     left: 50%;
     width: 15px;
     height: 15px;
-    background: var(--star-color);
+    background: transparent;
     z-index: 4;
-    transform: translate(-50%, -20%) rotate(45deg);
+    transform: translate(-50%, -20%);
     transition: transform  0.5s ease-in-out 1s;
-    box-shadow: 0 0 10px var(--shadow-color);
+    /* box-shadow: 0 0 10px var(--shadow-color); */
     cursor: pointer;
 }
 
@@ -96,18 +96,21 @@ body {
 .star::after {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: var(--star-color);
-    border-radius: 50px;
+    border-radius: 0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
-.star::before {
+/* .star::before {
     top: -7.5px;
-}
+} */
 
 .star::after {
-    right: 7.5px;
+    transform: rotate(36deg); /* Duplicamos y rotamos para un efecto más nítido si es necesario */
 }
 
 .flap > .envelope::before {
@@ -122,6 +125,6 @@ body {
 }
 
 .flap > .star {
-    transform: rotate(90deg);
+    transform: rotate(90deg) translate(-50%, -20%);
     transition-delay: 0.4s;
 }
