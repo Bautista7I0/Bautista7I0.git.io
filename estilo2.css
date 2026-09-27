@@ -3,7 +3,7 @@
     --big-color: rgb(5, 53, 61);
     --bg-envelope-color: #f5edd1;
     --envelope-tab: #ecdeb8;
-    --envelope-cover: #efc4a7;
+    --envelope-cover: #fff0c8;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --txt-color: #444;
     --star-color: rgb(110, 176, 212);
@@ -59,9 +59,9 @@ body {
     position: absolute;
     z-index: 4; /* Cubre la parte inferior de la carta */
     border-top: 130px solid transparent;
-    border-left: 150px solid var(--envelope-cover);
-    border-right: 150px solid var(--envelope-cover);
-    border-bottom: 100px solid var(--envelope-cover);
+    border-left: 150px solid var(--envelope-tab);
+    border-right: 150px solid var(--envelope-tab);
+    border-bottom: 100px solid var(--envelope-tab);
     bottom: 0;
 }
 
@@ -114,7 +114,7 @@ body {
 }
 
 .flap > .envelope .letter {
-    bottom: 200px;
+    bottom: 300px;
     transform: scale(1.35); /* Escala de salida ligeramente mayor */
     transition-delay: 0.6s;
     z-index: 3; /* Se sitúa por encima de todo cuando sale */
@@ -126,13 +126,24 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.toque {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.text a,
+.text a:link,
+.text a:visited,
 .map, 
 .map:link, 
 .map:visited {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--star-color) !important;
 }
 
+.text a:hover,
+.text a:active,
 .map:hover,
 .map:active {
     color: var(--star-color);
